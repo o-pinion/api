@@ -10,6 +10,11 @@ export interface ApiParameters {
   search?: string
 }
 
+export interface ApiListParameters extends ApiParameters {
+  last_id?: number
+  limit?: number
+}
+
 export interface ApiResponse {
   attributes?: any
   items?: any[]
