@@ -1,0 +1,50 @@
+{
+  "name": "api-opinionated",
+  "version": "0.0.1",
+  "description": "Opinionated API utilities",
+  "license": "MIT",
+  "author": "Raphael Balet",
+  "maintainers": [
+    "raphael.balet@outlook.com"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENCE",
+    "README.md"
+  ],
+  "keywords": [
+    "api",
+    "opinionated"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --minify --dts --format cjs,esm --out-dir dist",
+    "publish": "npm run build && npm publish",
+    "prepare": "husky"
+  },
+  "homepage": "https://github.com/rbalet/api-opinionated#readme",
+  "bugs": {
+    "url": "https://github.com/rbalet/api-opinionated/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "url": "git+https://github.com/rbalet/api-opinionated.git"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.2.2",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@semantic-release/apm-config": "^9.0.1",
+    "husky": "^9.0.11",
+    "semantic-release": "^23.0.8",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  },
+  "release": {
+    "extends": "@semantic-release/apm-config"
+  }
+}
