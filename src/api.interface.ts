@@ -23,7 +23,8 @@ export interface ApiResponse {
 
 export interface ApiError {
   _status: number
-  details?: string
+  error: string // Ex: NO_MATCH
+  detail?: string
   message?: string
 }
 
