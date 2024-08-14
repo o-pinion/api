@@ -1,6 +1,6 @@
 {
   "name": "api-opinionated",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "Opinionated API utilities",
   "license": "MIT",
   "author": "Raphael Balet",
@@ -21,6 +21,7 @@
   ],
   "scripts": {
     "build": "tsup src/index.ts --minify --dts --format cjs,esm --out-dir dist",
+    "publish": "npm run build && npm publish",
     "prepare": "husky"
   },
   "homepage": "https://github.com/rbalet/api-opinionated#readme",
@@ -35,13 +36,13 @@
     "url": "git+https://github.com/rbalet/api-opinionated.git"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.2.2",
+    "@commitlint/cli": "^19.4.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@semantic-release/apm-config": "^9.0.1",
-    "husky": "^9.0.11",
-    "semantic-release": "^23.0.8",
-    "tsup": "^8.0.2",
-    "typescript": "^5.4.5"
+    "husky": "^9.1.4",
+    "semantic-release": "^24.0.0",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
   },
   "release": {
     "extends": "@semantic-release/apm-config"
