@@ -24,8 +24,8 @@ export interface ApiResponse {
 export interface ApiError {
   _status: number
   error: string // Ex: NO_MATCH
-  detail?: string
-  message?: string
+  message?: string // Explain what the error is
+  details?: any // Could be an object
 }
 
 export interface ApiSort {
