@@ -22,8 +22,7 @@ export interface ApiResponse {
 }
 
 export interface ApiError {
-  _status: number
-  error: string // Ex: NO_MATCH
+  code: string // Error code, eg: 'INVALID_PARAMETER'
   message?: string // Explain what the error is
   details?: any // Could be an object
 }
