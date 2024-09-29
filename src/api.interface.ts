@@ -39,6 +39,11 @@ export interface ApiSort {
  */
 export enum ApiStatusCode {
   /**
+   * The server is not running or the server is not responding.
+   */
+  VOID = 0,
+
+  /**
    * The server has received the request headers and the client should proceed to send the request body
    * (in the case of a request for which a body needs to be sent; for example, a POST request).
    * Sending a large request body to a server after a request has been rejected for inappropriate headers would be inefficient.

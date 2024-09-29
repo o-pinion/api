@@ -1,6 +1,6 @@
 {
   "name": "api-opinionated",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Opinionated API utilities",
   "license": "MIT",
   "author": "Raphael Balet",
@@ -21,7 +21,7 @@
   ],
   "scripts": {
     "build": "tsup src/index.ts --minify --dts --format cjs,esm --out-dir dist",
-    "p": "npm run build && npm publish",
+    "publish": "npm run build && npm publish",
     "prepare": "husky"
   },
   "homepage": "https://github.com/rbalet/api-opinionated#readme",
