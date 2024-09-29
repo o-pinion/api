@@ -19,6 +19,7 @@ export interface ApiResponse {
   attributes?: any
   items?: any[]
   error?: ApiError
+  status?: ApiStatusCode
 }
 
 export interface ApiError {
