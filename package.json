@@ -1,6 +1,6 @@
 {
-  "name": "api-opinionated",
-  "version": "0.0.10",
+  "name": "@o-pinion/api",
+  "version": "1.0.1",
   "description": "Opinionated API utilities",
   "license": "MIT",
   "author": "Raphael Balet",
@@ -24,25 +24,25 @@
     "publish": "npm run build && npm publish",
     "prepare": "husky"
   },
-  "homepage": "https://github.com/rbalet/api-opinionated#readme",
+  "homepage": "https://github.com/o-pinion/api#readme",
   "bugs": {
-    "url": "https://github.com/rbalet/api-opinionated/issues"
+    "url": "https://github.com/o-pinion/api/issues"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
   "repository": {
-    "url": "git+https://github.com/rbalet/api-opinionated.git"
+    "url": "git+https://github.com/o-pinion/api.git"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.4.0",
-    "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
     "@semantic-release/apm-config": "^9.0.1",
-    "husky": "^9.1.4",
-    "semantic-release": "^24.0.0",
-    "tsup": "^8.2.4",
-    "typescript": "^5.5.4"
+    "husky": "^9.1.7",
+    "semantic-release": "^24.2.3",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3"
   },
   "release": {
     "extends": "@semantic-release/apm-config"
