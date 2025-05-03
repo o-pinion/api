@@ -15,9 +15,9 @@ export interface ApiListParameters extends ApiParameters {
   limit?: number
 }
 
-export interface ApiResponse {
-  attributes?: any
-  items?: any[]
+export interface ApiResponse<T> {
+  attributes?: T
+  items?: T[]
   error?: ApiError
   status?: ApiStatusCode
 }

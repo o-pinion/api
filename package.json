@@ -1,6 +1,6 @@
 {
   "name": "@o-pinion/api",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Opinionated API utilities",
   "license": "MIT",
   "author": "Raphael Balet",
@@ -36,13 +36,13 @@
     "url": "git+https://github.com/o-pinion/api.git"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.7.1",
-    "@commitlint/config-conventional": "^19.7.1",
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
     "@semantic-release/apm-config": "^9.0.1",
     "husky": "^9.1.7",
     "semantic-release": "^24.2.3",
-    "tsup": "^8.3.6",
-    "typescript": "^5.7.3"
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
   },
   "release": {
     "extends": "@semantic-release/apm-config"
