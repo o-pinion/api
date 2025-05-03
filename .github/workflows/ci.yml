@@ -10,28 +10,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'npm'
-      - run: npm ci
-      # - name: lint
-      #   run: npm run lint
-      # - run: npm run build
-      # - name: Run test
-      #   run: npm run test:ci
-      # - name: Upload coverage reports to Codecov
-      #   uses: codecov/codecov-action@v4.0.1
-      #   with:
-      #     token: ${{ secrets.CODECOV_TOKEN }}
-      #     slug: o-pinion/api
-
   publish:
-    needs: build
+    # needs: build
     runs-on: ubuntu-latest
     if: github.ref_name == 'main'
     permissions:
@@ -39,18 +19,28 @@ jobs:
       issues: write # to be able to comment on released issues
       pull-requests: write # to be able to comment on released pull requests
       id-token: write # to enable use of OIDC for npm provenance
+
     steps:
-      - uses: actions/checkout@v4
+      - name: ⬇️ Get latest code
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+
+      - name: ⬇️ Get Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
-      - run: npm ci
-      - run: npm run build
-      - name: release
+
+      - name: 📦 Install dependencies
+        run: npm i
+
+      - name: 🏗️ Build
+        run: npm run build
+
+      - name: 🚀 Release
         run: npx semantic-release --branches main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
