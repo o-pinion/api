@@ -1,0 +1,26 @@
+{
+  "name": "@o-pinion/api",
+  "version": "1.0.2",
+  "description": "Opinionated API utilities",
+  "license": "MIT",
+  "author": "Raphael Balet",
+  "maintainers": [
+    "raphael.balet@outlook.com"
+  ],
+  "keywords": [
+    "api",
+    "opinionated"
+  ],
+  "homepage": "https://github.com/o-pinion/api#readme",
+  "bugs": {
+    "url": "https://github.com/o-pinion/api/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "url": "git+https://github.com/o-pinion/api.git"
+  },
+  "sideEffects": false
+}

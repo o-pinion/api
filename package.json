@@ -20,7 +20,7 @@
     "opinionated"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --minify --dts --format cjs,esm --out-dir dist",
+    "build": "tsup src/index.ts --minify --dts --format cjs,esm --out-dir dist --onSuccess \"cp src/package.json dist/\"",
     "publish": "npm run build && npm publish",
     "prepare": "husky"
   },
